@@ -1,0 +1,3 @@
+string words          # input field type
+---
+uint32 count          # output field type
