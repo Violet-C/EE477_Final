@@ -11,7 +11,9 @@ word_counter = rospy.ServiceProxy(    # set up proxy
 	WordCount                         # service type
 )
 
-words = ' '.join(sys.argv[1:])        # parse arguments
-word_count = word_counter(words)      # use service
 
-print(words+'--> has '+str(word_count.count)+' words')
+valid_words = [k for k in sys.argv[1:] if '__' not in k]
+parsed_words = ' '.join(valid_words)        # parse arguments
+word_count = word_counter(parsed_words)      # use service
+
+print(parsed_words+' --> has '+str(word_count.count)+' words')

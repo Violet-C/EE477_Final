@@ -1,0 +1,7 @@
+<launch>
+	<node name ="server" pkg="violet_services"
+	type="service_server.py" output="screen" />
+	<node name ="client" pkg="violet_services"
+	type="service_client.py" output="screen"
+	args="$(arg words)" />
+</launch>

@@ -1,0 +1,6 @@
+<launch>
+	<node name ="publish" pkg="violet_topics"
+	type="message_publisher.py" output="screen" />
+	<node name ="subscribe" pkg="violet_topics"
+	type="message_subscriber.py" output="screen" />
+</launch>
