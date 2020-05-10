@@ -15,4 +15,4 @@ sub = rospy.Subscriber(                  # register subscriber
 	callback                             # callback function
 )
 
-rospy.spin()  # keeps node running until shut down
+rospy.spin()  # keep node running until shut down
