@@ -1,11 +1,11 @@
 #!/usr/bin/env python
-import rospy
-from violet_services.srv import WordCount, WordCountResponse
+import rospy                                                    # python client library for ROS                   
+from violet_services.srv import WordCount, WordCountResponse    # message types needed
 
-def count_words(request):
+def count_words(request):              # function to serve
 	return len(request.words.split())  # number of words
 
-rospy.init_node('service_server')
+rospy.init_node('service_server')      # initialize server node
 
 service = rospy.Service(  # register service
 	'word_count',         # service name
@@ -13,4 +13,4 @@ service = rospy.Service(  # register service
 	count_words           # function service provides
 )
 
-rospy.spin()
+rospy.spin()              # wait for requests
