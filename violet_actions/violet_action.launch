@@ -1,6 +1,6 @@
 <launch>
-	<node name ="server" pkg="violet_actions"
+	<node name ="server" pkg="violet_actions"             
 	type="violet_action_server.py" output="screen" />
-	<node name ="client" pkg="violet_actions"
+	<node name ="client" pkg="violet_actions"             
 	type="violet_action_client.py" output="screen" />
 </launch>
