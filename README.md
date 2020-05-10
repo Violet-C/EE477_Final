@@ -25,9 +25,9 @@ source devel/setup.bash
 
 
 
-# ROS package: |violet_topics|
+# ROS package: violet_topics
 
-This package has two pairs of a publisher node and a subscriber node.  One uses a custom message type to generate random complex numbers and print their real and imaginary parts to the screen.  The other prints out consecutive integers starting at 1.  Both will continue to run until ended by the user ('CTRL'+'C').
+This package has two pairs of a publisher node and a subscriber node.  One uses a custom message type to generate random complex numbers and print their real and imaginary parts to the screen.  The other prints out consecutive integers starting at 1.  Both will continue to run until ended by the user (Ctrl+C).
 
 ## Getting started
 
@@ -73,7 +73,7 @@ Both pairs of nodes can be run at the same time.  The message publisher and subs
 
 
 
-# ROS package: |violet_services|
+# ROS package: violet_services
 
 This package uses a server node and a client node to count the number of words in an input phrase, and prints this number to the screen in the form 'This is an input of 7 words --> has 7 words'.
 
@@ -115,7 +115,7 @@ roslaunch violet_services violet_service.launch words:="Input words"
 
 
 
-# ROS package: |violet_actions|
+# ROS package: violet_actions
 
 This package uses a server node and client node to set a timer for up to 60 seconds.  Each second, the time elapsed and time remaining are printed to the screen.  After the timer finishes, it prints its exit status.  The timer will be exited with an error message if a timer over 60 seconds is requested or if the timer is preempted by the user before it finishes.  Commented code is included in  `violet_action_client.py` to test both of these cases.
 
