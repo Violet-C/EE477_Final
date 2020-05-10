@@ -20,7 +20,7 @@ def do_timer(goal):            # action function
 	while (time.time() - start_time) < goal.time_to_wait.to_sec():
 		# go until time to wait is over
 
-		if   server.is_preempt_requested():    # stops if preempted by user
+		if   server.is_preempt_requested():    # stop if preempted by user
 			result = TimerResult()                                 # create result object
 			result.time_elapsed = rospy.Duration.from_sec(
 				time.time() - start_time)                          # calculate time elapsed
